@@ -1,0 +1,17 @@
+.footer {
+    background-color: #332208;
+    &-block {   
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 100px 0 40px;
+    }
+    &-social {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 25px;
+        &__link {
+            margin: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.review {
+    background-color: #332208;
+    padding: 200px 0 100px;
+    &-block {
+        display: flex;
+        justify-content: space-between;
+        &__card {
+            border: 2px solid #C5AC2D;
+            width: 270px;
+            height: 300px;
+            padding: 30px;
+        }
+    }
+    &-card {
+        &__title {
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+        }
+        &__text {
+            text-align: center;
+            color: #fff;
+            font-family: 'Roboto Condensed';
+            margin-top: 47px;
+        }
+    }
+}
