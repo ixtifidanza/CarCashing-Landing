@@ -1,6 +1,9 @@
 .navbar {
     background-color: #332208;
     padding: 15px 0;
+    z-index: 9999;
+
+
     &-block {
         display: flex;
         align-items: center;
@@ -20,8 +23,16 @@
         }
     }
     &-number {
+        font-size: 22px;
         text-decoration: none;
         color: #fff;
         font-family: 'Roboto Condensed';
     }
+}
+
+.fixed {
+    background-color: #332208;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
 }

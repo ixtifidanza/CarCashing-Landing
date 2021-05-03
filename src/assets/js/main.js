@@ -13,43 +13,73 @@ var swiper = new Swiper('.swiper-container', {
     },
   });
 
-  // var swiper2 = new Swiper('.swiper-container2', {
-  //   slidesPerView: 1,
-  //   spaceBetween: 10,
-  //   // init: false,
-  //   // pagination: {
-  //   //   el: '.swiper-pagination2',
-  //   //   clickable: true,
-  //   // },
-  //   // breakpoints: {
-  //   //   640: {
-  //   //     slidesPerView: 2,
-  //   //     spaceBetween: 20,
-  //   //   },
-  //   //   768: {
-  //   //     slidesPerView: 4,
-  //   //     spaceBetween: 40,
-  //   //   },
-  //   //   1024: {
-  //   //     slidesPerView: 5,
-  //   //     spaceBetween: 50,
-  //   //   },
-  //   // }
-  // });
+$(function () {
 
-  var swiper2 = new Swiper('.swiper-container2', {
-    slidesPerView: 3,
-    direction: getDirection(),
-    on: {
-      resize: function () {
-        swiper.changeDirection(getDirection());
+$('[data-scroll]').on('click', function(event) {
+    event.preventDefault(); 
+
+    var elementId = $(this).data('scroll');
+    var elementOffset = $(elementId).offset().top;
+
+
+    $('html, body').animate({
+      scrollTop: elementOffset -70
+    }, 1000);
+  });
+});
+
+
+(function($) {
+  "use strict";
+
+  var $navbar = $("#navbar"),
+      y_pos = $navbar.offset().top,
+      height = $navbar.height();
+
+  $(document).scroll(function() {
+      var scrollTop = $(this).scrollTop();
+
+      if (scrollTop > y_pos + height) {
+          $navbar.addClass("navbar-fixed").animate({
+              top: 0,
+          });
+      } else if (scrollTop <= y_pos) {
+          $navbar.removeClass("navbar-fixed").clearQueue().animate({
+              top: "0"
+          }, 100);
       }
-    }
   });
 
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+})(jQuery, undefined);
 
-    return direction;
-  }
+window.onscroll = function(){
+  scrollFunction()
+}
+function scrollFunction(){
+  var sn = document.getElementById("navbar");
+     if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+        sn.style.top = "0"
+     }
+     else{
+        sn.style.top = "-45px"
+     }
+}
+
+var modal = $('.modal');
+var modalClose = $('.modal-close');
+var modalBtn = $('#modalBtn');
+
+
+modalBtn.on('click', function() {
+  modal.css('display', 'block');
+});
+
+modalClose.on('click', function() {
+  modal.css('display', 'none');
+});
+
+
+
+
+
+

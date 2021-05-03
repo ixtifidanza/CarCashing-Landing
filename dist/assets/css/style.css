@@ -9,10 +9,21 @@
     padding: 0px 50px;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Fira Sans';
     font-weight: 500;
-    overflow-x: hidden;
+}
+
+.navbar-fixed {
+    position: fixed;
+    -webkit-transition: all 0 0.5s linear;
+    -o-transition: all 0 0.5s linear;
+    transition: all 0 0.5s linear;
+    width: 100%;
 }
 
 .swiper-container {
@@ -69,6 +80,7 @@ body {
 .navbar {
     background-color: #332208;
     padding: 15px 0;
+    z-index: 9999;
 }
 
 .navbar-block {
@@ -101,9 +113,17 @@ body {
 }
 
 .navbar-number {
+    font-size: 22px;
     text-decoration: none;
     color: #fff;
     font-family: 'Roboto Condensed';
+}
+
+.fixed {
+    background-color: #332208;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
 }
 
 .header-slider {
@@ -560,4 +580,46 @@ body {
 
 .footer-social__link {
     margin: 0 20px;
+}
+
+.modal {
+    display: none;
+    background-color: #e6e6e6;
+    width: 450px;
+    height: 300px;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    left: 35%;
+    padding: 15px;
+}
+
+.modal-block {
+    position: relative;
+}
+
+.modal-block__content {
+    margin-top: 70px;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+}
+
+.modal-text {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    background-color: #C5AC2D;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    width: 22px;
+    height: 22px;
 }
