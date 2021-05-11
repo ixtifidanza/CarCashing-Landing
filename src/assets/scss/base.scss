@@ -6,6 +6,9 @@
 .container {
     // width: 1400px;
     padding: 0px 50px;
+    @media(max-width: 1200px) {
+        padding: 0px 8px;
+    }
 }
 a {
     text-decoration: none;
@@ -13,14 +16,31 @@ a {
 body {
     font-family: 'Fira Sans';
     font-weight: 500;
-    // overflow-x: hidden;
-    // overflow-y: scroll;
+    position: relative;
 }
 .navbar-fixed {
     position: fixed;
     transition: all .0.5s linear;
     width: 100%;
     
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: all .5s linear;
+}
+
+.open {
+    opacity: 1;
+    z-index: 9;
 }
 .swiper-container {
     width: 100%;
@@ -48,21 +68,3 @@ body {
 }
 
 
-
-.swiper-container2 {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide2 {
-    text-align: center;
-    font-size: 18px;
-    background: #332208;
-
-    /* Center slide text vertically */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  

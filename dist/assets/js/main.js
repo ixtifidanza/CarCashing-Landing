@@ -68,15 +68,27 @@ function scrollFunction(){
 var modal = $('.modal');
 var modalClose = $('.modal-close');
 var modalBtn = $('#modalBtn');
+var overlay = $('.overlay');
+var body = $('.body')
 
 
-modalBtn.on('click', function() {
-  modal.css('display', 'block');
+modalBtn.on('click', function (e) {
+  e.preventDefault();
+  modal.css('opacity', '1');
+  modal.css('transform', 'translateY(5%)');
+  overlay.addClass('open');
+  body.css('overflow-y', 'hidden');
 });
 
-modalClose.on('click', function() {
-  modal.css('display', 'none');
+modalClose.on('click', function (e) {
+  e.preventDefault();
+  modal.css('opacity', '0');
+  modal.css('transform', 'translateY(-100%)');
+  overlay.removeClass('open');
+  body.css('overflow-y', 'scroll');
 });
+
+
 
 
 

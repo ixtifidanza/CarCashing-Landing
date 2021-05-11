@@ -9,6 +9,9 @@
             width: 270px;
             height: 300px;
             padding: 30px;
+            @media(max-width: 1200px) {
+                width: 240px;
+            }
         }
     }
     &-card {

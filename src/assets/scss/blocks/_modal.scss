@@ -1,14 +1,16 @@
 .modal {
-    display: none;
-    background-color: #e6e6e6;
+    background-color: #332208;
     width: 450px;
     height: 300px;
-    z-index: 999;
+    z-index: 99999;
     position: absolute;
-    top: 0;
-    bottom: 50px;
+    // top: 0;
     left: 35%;
     padding: 15px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all linear 0.4s;
     &-block {
         position: relative;
         &__content {
@@ -16,16 +18,20 @@
         }
     }
     &-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         font-size: 30px;
-        color: #000;
+        color: #fff;
+        font-family: 'Roboto Condensed';
+
     }
     &-text {
         margin-top: 30px;
         text-align: center;
         font-size: 40px;
         color: #fff;
-        background-color: #C5AC2D;
     }
     &-close {
         position: absolute;
@@ -33,4 +39,16 @@
         width: 22px;
         height: 22px;
     }
+    &-smile {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+    }
+    &-check {
+        width: 40px;
+        height: 40px;
+    }
 }
+
+
+

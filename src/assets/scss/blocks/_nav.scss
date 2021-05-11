@@ -1,7 +1,7 @@
 .navbar {
     background-color: #332208;
     padding: 15px 0;
-    z-index: 9999;
+    z-index: 9;
 
 
     &-block {
@@ -30,9 +30,4 @@
     }
 }
 
-.fixed {
-    background-color: #332208;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-}
+
